@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 
 # Load the saved model
-loaded_model = pickle.load(open('D:/JAKY/SEMESTER 4/AI/Machine Learning Projects/Rock vs Mine/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 # Creating a function for Prediction
 def rockmine_prediction(input_data):
