@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 
 # Load the saved model
-loaded_model = pickle.load(open('trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('D:/JAKY/SEMESTER 4/AI/Machine Learning Projects/Rock vs Mine/trained_model.sav', 'rb'))
 
 # Creating a function for Prediction
 def rockmine_prediction(input_data):
@@ -48,45 +48,6 @@ def main():
     
     if result:
         st.success(result)
-
-    # Custom HTML and CSS for animated bubbles with names
-    bubbles_html = """
-    <style>
-    .bubbles {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-    }
-    .bubble {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        color: white;
-        margin: 0 10px;
-        animation: changeColor 3s infinite;
-    }
-    @keyframes changeColor {
-        0% { background-color: #FF5733; }
-        25% { background-color: #33FF57; }
-        50% { background-color: #3357FF; }
-        75% { background-color: #FF33A1; }
-        100% { background-color: #FF5733; }
-    }
-    </style>
-    <div class="bubbles">
-        <div class="bubble">Zaky</div>
-        <div class="bubble">Komang</div>
-        <div class="bubble">Agung</div>
-        <div class="bubble">Niko</div>
-        <div class="bubble">Rama</div>
-    </div>
-    """
-    st.markdown(bubbles_html, unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
